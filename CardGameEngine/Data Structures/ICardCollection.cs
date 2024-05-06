@@ -8,7 +8,7 @@ namespace CardGameEngine
     /// <typeparam name="T"></typeparam>
     public interface ICardCollection<T> : ICollection<T>, IEnumerable<T>, IEnumerable where T : Card
     {
-
+        public T this[int index] { get;}
 
     }
 }

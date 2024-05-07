@@ -1,5 +1,5 @@
 ﻿
-using System.Collections;
+using System.Reflection;
 
 namespace CardGameEngine
 {
@@ -10,5 +10,16 @@ namespace CardGameEngine
     public abstract class Pile<T> : CardCollection<T> where T : Card
     {
        
+
+
+        public int Search(int cardID)
+        {
+            return _cards.FindIndex(t => t.ID == cardID);
+        }
+        public int Search(T card)
+        {
+            return Search(card.ID);
+        }
+
     }
 }

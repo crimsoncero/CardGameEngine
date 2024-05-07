@@ -10,5 +10,11 @@ namespace CardGameEngine
     public abstract class Library<T> : CardCollection<T> where T : Card
     {
         
+
+        public void OrderBy<TProperty>(Func<T, TProperty> propertySelector)
+        {
+            _cards.OrderBy(propertySelector);
+        }
+
     }
 }

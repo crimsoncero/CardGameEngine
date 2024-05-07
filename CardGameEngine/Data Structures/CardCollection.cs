@@ -5,10 +5,17 @@ namespace CardGameEngine
     public abstract class CardCollection<T> : ICardCollection<T> where T : Card
     {
         protected List<T> _cards;
+
         public virtual int Count { get { return _cards.Count; } }
         public bool IsReadOnly { get { return false; } }
-
         public T this[int index] { get { return _cards[index]; } protected set { _cards[index] = value; } }
+        
+        
+        public CardCollection()
+        {
+            _cards = new List<T>();
+        }
+
         public virtual void Add(T card)
         {
             _cards.Add(card);

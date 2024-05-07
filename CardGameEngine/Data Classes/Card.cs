@@ -1,7 +1,7 @@
 ﻿
 namespace CardGameEngine
 {
-    public class Card : IComparable<Card>, IEquatable<Card>
+    public abstract class Card : IComparable<Card>, IEquatable<Card>
     {
         public int ID { get; init; }
 
